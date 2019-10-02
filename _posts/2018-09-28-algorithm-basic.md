@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "알고리즘 베이직"
-category: dev
+tags: [dev, algorithm]
 ---
 
 # big O notation
