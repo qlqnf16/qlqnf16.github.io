@@ -4,8 +4,7 @@ title: "부스트캠프 챌린지 Day5"
 category: [boostcamp, js]
 ---
 
-1. vscode 디버그 기능 사용법을 익히고, 처음으로 실제로 적용해봤다.
-2. js generator function을 사용해봤다.
+vsCode 디버깅과 JS generator function
 
 ## **디버깅**
 

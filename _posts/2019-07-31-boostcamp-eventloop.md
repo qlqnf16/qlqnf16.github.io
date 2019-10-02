@@ -4,7 +4,9 @@ title: "부스트캠프 챌린지 Day11"
 category: [boostcamp, js]
 ---
 
-js의 핵심인 callstack과 eventloop에 대해 알아보고, 직접 구현해보았다. 그동안 동기/비동기 처리를 할 때 거의 감에(..) 의존해서 코딩했었는데, 이 미션을 통해 브라우저에서 js가 작동하는 방식을 더 제대로 이해할 수 있었다.
+js의 핵심, callstack과 eventloop
+
+callstack과 eventloop에 대해 알아보고, 직접 구현해보았다. 그동안 동기/비동기 처리를 할 때 거의 감에(..) 의존해서 코딩했었는데, 이 미션을 통해 브라우저에서 js가 작동하는 방식을 더 제대로 이해할 수 있었다.
 
 이벤트루프를 이해하고 싶다면: [What the Heck is Event Loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 

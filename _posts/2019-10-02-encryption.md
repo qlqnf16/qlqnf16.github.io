@@ -4,6 +4,8 @@ title: "암호화 알고리즘"
 category: [computer science]
 ---
 
+대칭키 암호화, 비대칭키 암호화, 그리고 해쉬(Hash)
+
 암호화(encryption)란 평문(plaintext, 암호화하지 않은 데이터)을 암호문(ciphertext)으로 바꾸는 과정을, 복호화(decryption)란 반대로 암호문을 평문으로 바꾸는 과정을 말한다.
 
 ## 암호화(Encryption)

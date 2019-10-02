@@ -4,7 +4,7 @@ title: "네이버 부스트캠프 챌린지 Day3"
 category: [boostcamp, js]
 ---
 
-주제는 JS 언어 익히기. map, reduce, filter, foreach 등 javascript 자체 array method들을 직접 구현해보았다.
+.map(), .reduce(), .filter(), .foreach() 등 javascript 자체 array method들을 직접 구현해보았다.
 
 ## **구현한 것**
 
