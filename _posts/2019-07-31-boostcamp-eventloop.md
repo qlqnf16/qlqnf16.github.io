@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day11"
-tags: [boostcamp, js]
+category: [boostcamp, js]
 ---
 
 js의 핵심인 callstack과 eventloop에 대해 알아보고, 직접 구현해보았다. 그동안 동기/비동기 처리를 할 때 거의 감에(..) 의존해서 코딩했었는데, 이 미션을 통해 브라우저에서 js가 작동하는 방식을 더 제대로 이해할 수 있었다.

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "알고리즘 베이직"
-tags: [dev, algorithm]
+category: [dev, algorithm]
 ---
+
+big O notation, searching algorithm, 각종 정렬법
 
 # big O notation
 
@@ -43,10 +45,6 @@ someFunction = arr => {
 위와 같이 for loop 안에서 또 다른 for loop 가 돌아가는 경우 배열의 크기에 따라 n\*n 번 돌아간다. 그럴 때는 **O(n^2)**로 표현한다.
 
 그 외에도 O(n log n)과 같은 표현방식이 있고, 당연히 더 작을수록 시행 시간이 짧아지기 때문에 더 이상적이다. 함수를 짤 때 그냥 짜는 게 아니라 이 시간복잡도를 고려해 더 효율적으로 짜는 게 좋다는 것!
-
-# Problem solving patterns
-
-# Recursion
 
 # Searching
 

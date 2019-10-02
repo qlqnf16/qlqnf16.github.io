@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day8"
-tags: [boostcamp, js, design pattern]
+category: [boostcamp, js, design pattern]
 ---
 
 자바스크립트의 대표적인 디자인 패턴 중 하나인 Observer 패턴을 구현해봤다. 평소 React 같은 프레임워크를 사용했는데, 이것도 일종의 Observer pattern으로 구현된 라이브러리인 듯 하다. 프레임워크의 힘으로 편하게 사용했던 걸 직접 구현해보니 또 새로웠다.

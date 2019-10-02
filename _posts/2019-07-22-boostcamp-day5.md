@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day5"
-tags: [boostcamp, js]
+category: [boostcamp, js]
 ---
 
 1. vscode 디버그 기능 사용법을 익히고, 처음으로 실제로 적용해봤다.

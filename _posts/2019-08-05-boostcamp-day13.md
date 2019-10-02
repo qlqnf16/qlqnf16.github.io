@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day13"
-tags: [boostcamp, regex]
+category: [boostcamp, regex]
 ---
+
+tokenizer/lexer/parser, 그리고 정규표현식!
 
 ### **tokenizer**
 

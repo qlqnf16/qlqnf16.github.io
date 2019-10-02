@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day7"
-tags: [boostcamp, virtual environment, shellscript]
+category: [boostcamp, virtual environment, shellscript]
 ---
 
 docker를 이용해 가상환경을 설치하고 서버를 구축해봤다. 평소에 프론트엔드 개발에 치우쳐서 배포같은 건 등한시하고 살았는데, 그래서 굉장히 애먹었다. 아마 부스트캠프 챌린지 중 제일 어려웠던 주제가 아닌가 생각한다(ㅠㅠ) shell script도 처음 사용해봤는데 내가 지금까지 배워온 프로그래밍 언어와 상당히 달라서 어려웠다. 그래도 일단 기본 문법부터 배우고 미션에 도전했으면 더 잘 했을 것 같다. 무작정 구글링만 한 결과 오히려 더 꼬여서 고생했던.. 기본의 중요함을 배웠다^^..!

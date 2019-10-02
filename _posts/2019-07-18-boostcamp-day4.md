@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day4"
-tags: [boostcamp, computer science]
+category: [boostcamp, computer science]
 ---
 
 커리큘럼에 컴퓨터과학 관련 지식도 다룰 예정이라고 하더니, 논리게이트 주제가 나왔다. 문과 of 문과 인생을 살던 내 세계에는 and 와 or 밖에 없었는데 낯선 것들도 많이 보고 논리연산도 접해봐서 재미있었던 주제.
