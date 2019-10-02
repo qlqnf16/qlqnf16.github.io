@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "django-로그인, 로그아웃 및 authentication 구현하기"
 category: django
 ---
@@ -20,7 +21,7 @@ django도 방대한 라이브러리를 가진 웹프레임워크답게 간편하
 ```html
 {% if user.is_authenticated %}
 <a href="{% url 'post_new' %}" class="top-menu"
-  ><span class="glyphicon glyphicon-plus">+</span></a
+    ><span class="glyphicon glyphicon-plus">+</span></a
 >
 {% endif %}
 ```

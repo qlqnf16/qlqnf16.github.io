@@ -1,7 +1,9 @@
 ---
-title: '알고리즘 베이직'
+layout: post
+title: "알고리즘 베이직"
 category: dev
 ---
+
 # big O notation
 
 똑같은 결과를 내는 함수라도, 어떻게 짜느냐, 실제로 이 함수가 어떻게 동작하느냐에 따라 각각의 함수는 다른 퍼포먼스를 보일 수 있다. 예를 들어 10000 개의 요소가 있는 배열에서 한 요소를 검색한다 할 때, 어떤 함수는 10 초가 걸리기도 하고 어떤 함수는 1 초도 걸리지 않는다. 이런걸 시간복잡도라고 하는데, 이 시간복잡도를 표현하는 방법이 **big O notation** 이다.
@@ -11,11 +13,11 @@ category: dev
 ```js
 // 1
 const sum = n => {
-  let result = 0;
-  for (let i = n; i > 0; i--) {
-    result += i;
-  }
-  return result;
+    let result = 0;
+    for (let i = n; i > 0; i--) {
+        result += i;
+    }
+    return result;
 };
 
 // 2
@@ -30,11 +32,11 @@ const sum = n => n(n * 1) / 2;
 
 ```js
 someFunction = arr => {
-  for (i = 0; i < arr.length; i++) {
-    for (j = 0; j < arr.length; j++) {
-      // ...
+    for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr.length; j++) {
+            // ...
+        }
     }
-  }
 };
 ```
 
@@ -54,12 +56,12 @@ someFunction = arr => {
 
 ```js
 function linearSearch(arr, num) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === num) {
-      return i;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === num) {
+            return i;
+        }
     }
-  }
-  return -1;
+    return -1;
 }
 
 /// O(n)
@@ -71,15 +73,15 @@ function linearSearch(arr, num) {
 
 ```js
 function binarySearch(arr, val) {
-  let left = 0,
-    right = arr.length - 1,
-    middle = Math.floor((left + right) / 2);
-  while (left < right && middle !== val) {
-    if (arr[middle] > val) right = middle - 1;
-    else left = middle + 1;
-    middle = Math.floor((left + right) / 2);
-  }
-  return middle === val ? middle : -1;
+    let left = 0,
+        right = arr.length - 1,
+        middle = Math.floor((left + right) / 2);
+    while (left < right && middle !== val) {
+        if (arr[middle] > val) right = middle - 1;
+        else left = middle + 1;
+        middle = Math.floor((left + right) / 2);
+    }
+    return middle === val ? middle : -1;
 }
 
 /// O(log n)
@@ -99,18 +101,18 @@ insertion sort, bubble sort, selection sort 등 다양한 정렬 접근법이 �
 
 ```js
 function bubbleSort(arr) {
-  let noSwaps;
-  for (let i = arr.length; i > 0; i--) {
-    noSwaps = true;
-    for (let j = 0; j < i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-        noSwaps = false;
-      }
+    let noSwaps;
+    for (let i = arr.length; i > 0; i--) {
+        noSwaps = true;
+        for (let j = 0; j < i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                noSwaps = false;
+            }
+        }
+        if (noSwaps) break;
     }
-    if (noSwaps) break;
-  }
-  return arr;
+    return arr;
 }
 
 /// O(n^2)
@@ -126,14 +128,14 @@ Bubble Sort, Insertion Sort 와 같은 Time Complexity 를 가지지만(n^2), �
 
 ```js
 function selectionSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let minimum = i;
-    for (let j = i; j < arr.length; j++) {
-      if (arr[j] < arr[minimum]) minimum = j;
+    for (let i = 0; i < arr.length; i++) {
+        let minimum = i;
+        for (let j = i; j < arr.length; j++) {
+            if (arr[j] < arr[minimum]) minimum = j;
+        }
+        if (i !== minimum) [arr[i], arr[minimum]] = [arr[minimum], arr[i]];
     }
-    if (i !== minimum) [arr[i], arr[minimum]] = [arr[minimum], arr[i]];
-  }
-  return arr;
+    return arr;
 }
 
 /// O(n^2)
@@ -145,14 +147,14 @@ function selectionSort(arr) {
 
 ```js
 function insertionSort(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    let currentVal = arr[i];
-    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
-      arr[j + 1] = arr[j];
+    for (let i = 1; i < arr.length; i++) {
+        let currentVal = arr[i];
+        for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+            arr[j + 1] = arr[j];
+        }
+        arr[j + 1] = currentVal;
     }
-    arr[j + 1] = currentVal;
-  }
-  return arr;
+    return arr;
 }
 
 /// O(n^2)
@@ -183,35 +185,35 @@ function insertionSort(arr) {
 
 ```js
 function merge(arr1, arr2) {
-  let results = [],
-    i = 0,
-    j = 0;
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
-      results.push(arr1[i]);
-      i++;
-    } else {
-      results.push(arr2[j]);
-      j++;
+    let results = [],
+        i = 0,
+        j = 0;
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            results.push(arr1[i]);
+            i++;
+        } else {
+            results.push(arr2[j]);
+            j++;
+        }
     }
-  }
-  while (i < arr1.length) {
-    results.push(arr1[i]);
-    i++;
-  }
-  while (j < arr2.length) {
-    results.push(arr2[j]);
-    j++;
-  }
-  return results;
+    while (i < arr1.length) {
+        results.push(arr1[i]);
+        i++;
+    }
+    while (j < arr2.length) {
+        results.push(arr2[j]);
+        j++;
+    }
+    return results;
 }
 
 function mergeSort(arr) {
-  if (arr.length <= 1) return arr;
-  let mid = Math.floor(arr.length / 2);
-  let left = mergeSort(arr.slice(0, mid));
-  let right = mergeSort(arr.slice(mid));
-  return merge(left, right);
+    if (arr.length <= 1) return arr;
+    let mid = Math.floor(arr.length / 2);
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+    return merge(left, right);
 }
 
 mergeSort([10, 24, 76, 73]);
@@ -227,29 +229,29 @@ mergeSort([10, 24, 76, 73]);
 
 ```js
 function swap(arr, swapIdx, i) {
-  [arr[swapIdx], arr[i]] = [arr[i], arr[swapIdx]];
+    [arr[swapIdx], arr[i]] = [arr[i], arr[swapIdx]];
 }
 
 function pivot(arr, start = 0, end = arr.length + 1) {
-  let base = arr[start];
-  let swapIdx = start;
-  for (let i = start + 1; i < arr.length; i++) {
-    if (arr[i] < base) {
-      swapIdx++;
-      swap(arr, swapIdx, i);
+    let base = arr[start];
+    let swapIdx = start;
+    for (let i = start + 1; i < arr.length; i++) {
+        if (arr[i] < base) {
+            swapIdx++;
+            swap(arr, swapIdx, i);
+        }
     }
-  }
-  swap(arr, start, swapIdx);
-  return swapIdx;
+    swap(arr, start, swapIdx);
+    return swapIdx;
 }
 
 function quickSort(arr, left = 0, right = arr.length - 1) {
-  if (left < right) {
-    let pivotIndex = pivot(arr, left, right);
-    quickSort(arr, left, pivotIndex - 1);
-    quickSort(arr, pivotIndex + 1, right);
-  }
-  return arr;
+    if (left < right) {
+        let pivotIndex = pivot(arr, left, right);
+        quickSort(arr, left, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, right);
+    }
+    return arr;
 }
 
 /// O(n log n)
@@ -263,27 +265,27 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 
 ```js
 function getDigit(num, digit) {
-  num += "";
-  return num[num.length - digit - 1] * 1;
+    num += "";
+    return num[num.length - digit - 1] * 1;
 }
 
 function digitCount(num) {
-  return num.toString().length - 1;
+    return num.toString().length - 1;
 }
 
 function mostDigits(arr) {
-  let max = 0;
-  arr.forEach(e => (max = Math.max(max, digitCount(e))));
-  return max;
+    let max = 0;
+    arr.forEach(e => (max = Math.max(max, digitCount(e))));
+    return max;
 }
 
 function radixSort(arr) {
-  let mostdigit = mostDigits(arr);
-  for (let k = 0; k < mostdigit; k++) {
-    let digitbucket = [[], [], [], [], [], [], [], [], [], []];
-    arr.forEach(e => digitbucket[getDigit(e, k)].push(e));
-    arr = [].concat(...digitbucket);
-  }
-  return arr;
+    let mostdigit = mostDigits(arr);
+    for (let k = 0; k < mostdigit; k++) {
+        let digitbucket = [[], [], [], [], [], [], [], [], [], []];
+        arr.forEach(e => digitbucket[getDigit(e, k)].push(e));
+        arr = [].concat(...digitbucket);
+    }
+    return arr;
 }
 ```
