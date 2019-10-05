@@ -30,6 +30,12 @@ video {
   max-width: 100%;
 }
 
+blockquote {
+  border-left: 6px solid #d4d4d4;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
 a {
   color: #000;
   transition: color 0.3s;
