@@ -13,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: 이정민
-  tagline: Becoming a Devloper 🏃🏻‍♀️
+  tagline: Becoming a Developer 🏃🏻‍♀️
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
