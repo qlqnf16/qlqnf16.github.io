@@ -1,54 +1,46 @@
-title: 개발블로그
-author: qlqnf16
-email: lee.jeongmin1027@gmail.com
-description: > # this means to ignore newlines until "show_exerpts:"
+title: 개발블로그 #Your awesome title
+email: lee.jeongmin1027@gmail.com #youremail@domain.com
+description: > # this means to ignore newlines until "baseurl"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show excerpts on the homepage
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
-plainwhite:
+baseurl: # the subpath of the site
+url: http://starry99.github.io/catbook # the base hostname & protocol for your site
+
+permalink: /:year-:month/:title
+timezone:
+
+favicon: /assets/img/favicon.ico
+
+google_analytics: #UA—XXXXXXXX-X
+disqus_shortname: #disqus shortname
+
+user:
   name: 이정민
-  tagline: Becoming a Developer 🏃🏻‍♀️
-  date_format: "%b %-d, %Y"
-  sitemap: true # set to true to generate sitemap.xml content
+  pic: /assets/img/cat.jpg
+  picAlt: "profilepic"
+  job: Becoming a Developer 🏃🏻‍♀️
+  aboutme: true # comment this out if you don't need the 'about' page.
 
-  # generate social links in footer
-  social_links:
-    github: qlqnf16
-    # linkedIn: in/thelehhman
-    # rss: rss
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
-    # linkedin: jekyll
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
+exclude:
+  - README.md
+  - LICENSE
+  - github
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comment: true
 
-# Build settings
-theme: plainwhite
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown
 
-plugins:
-  - jekyll-seo-tag
-#  - jekyll-feed
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future: false
+unpublished: false
