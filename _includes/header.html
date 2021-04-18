@@ -20,6 +20,11 @@
         </li>
       </ul>
       {% endif %}
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="{{ site.baseurl }}/_includes/categories.html">about</a>
+              </li>
+            </ul>
       {% for category in site.categories %}
       {% capture cat_name %}{{ category | first }}{% endcapture %}
       <ul class="nav_list">
