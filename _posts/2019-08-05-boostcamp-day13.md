@@ -1,36 +1,36 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day13"
-category: [boostcamp, regex]
+categories: [boostcamp, computer-science]
 ---
 
 tokenizer/lexer/parser, 그리고 정규표현식!
 
 ### **tokenizer**
 
--   tokenizer 는 **의미있는 단위로 쪼개는 역할**을 한다
--   정규표현식을 이용했다. 처음엔 조건문으로 구현했으나, 정규표현식을 이용해 한 줄 안에 처리가 가능해졌다.
+- tokenizer 는 **의미있는 단위로 쪼개는 역할**을 한다
+- 정규표현식을 이용했다. 처음엔 조건문으로 구현했으나, 정규표현식을 이용해 한 줄 안에 처리가 가능해졌다.
 
 ### **lexer**
 
--   lexer는 쪼개진 데이터에 각각 다시 의미를 부여하는 역할을 한다.
--   미션의 요구사항에 따라 **괄호, 숫자, 문자, NULL**로 분리해주었다.
+- lexer는 쪼개진 데이터에 각각 다시 의미를 부여하는 역할을 한다.
+- 미션의 요구사항에 따라 **괄호, 숫자, 문자, NULL**로 분리해주었다.
 
-          [
-            { type: "LBracket", value: "[" },
-            { type: "number", value: 1 },
-            ...{ type: "string", value: "hello, world" },
-            { type: "NULL", value: null },
-            { type: "RBracket", value: "]" }
-          ];
+        [
+          { type: "LBracket", value: "[" },
+          { type: "number", value: 1 },
+          ...{ type: "string", value: "hello, world" },
+          { type: "NULL", value: null },
+          { type: "RBracket", value: "]" }
+        ];
 
 ### **parser**
 
--   parser는 의미를 부여한 데이터를 object로 구조화하는 역할을 한다.
--   child 에서 child 로 노드가 꼬리를 물고 이어지는 형태를 구조화하는 게 어려웠다.
-    -   각각의 노드를 저장하는 배열 `nodes` 와 현재 노드의 인덱스를 저장하는 변수 `nodeIdx` 를 설정해 구현했다.
-    -   괄호가 열리면 nodes 에 push 하고, nodeIdx에 1을 더한다. 괄호가 닫히면 nodeIdx에서 1을 빼고 nodes를 pop한다.
-    -   이 방법은 노드들을 모두 넣어둬야 해서 조금 비효율적인 것 같은데, 더 나은 방법을 고민해봐야겠다.
+- parser는 의미를 부여한 데이터를 object로 구조화하는 역할을 한다.
+- child 에서 child 로 노드가 꼬리를 물고 이어지는 형태를 구조화하는 게 어려웠다.
+  - 각각의 노드를 저장하는 배열 `nodes` 와 현재 노드의 인덱스를 저장하는 변수 `nodeIdx` 를 설정해 구현했다.
+  - 괄호가 열리면 nodes 에 push 하고, nodeIdx에 1을 더한다. 괄호가 닫히면 nodeIdx에서 1을 빼고 nodes를 pop한다.
+  - 이 방법은 노드들을 모두 넣어둬야 해서 조금 비효율적인 것 같은데, 더 나은 방법을 고민해봐야겠다.
 
 참고: [https://pa-pico.tistory.com/91](https://pa-pico.tistory.com/91)
 

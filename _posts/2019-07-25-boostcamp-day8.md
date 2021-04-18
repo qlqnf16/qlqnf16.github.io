@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day8"
-category: [boostcamp, js, design pattern]
+categories: [boostcamp, js, design pattern]
 ---
 
 Observer pattern에 대해 알아보고, 구현해보기
@@ -16,17 +16,17 @@ Observer pattern에 대해 알아보고, 구현해보기
 
 ```js
 class Observer {
-    constructor() {
-        this.observers = [];
-    }
+  constructor() {
+    this.observers = [];
+  }
 
-    register(f) {
-        this.observers = f;
-    }
+  register(f) {
+    this.observers = f;
+  }
 
-    notify(data) {
-        this.observers(data);
-    }
+  notify(data) {
+    this.observers(data);
+  }
 }
 
 module.exports = Observer;
@@ -51,7 +51,7 @@ class TodoHtmlView {
 }
 ```
 
-[참고자료1](http://blog.naver.com/PostView.nhn?blogId=c_ist82&logNo=220795909036&parentCategoryNo=&categoryNo=9&viewDate=&isShowPopularPosts=false&from=postView)
+[참고자료1](http://blog.naver.com/PostView.nhn?blogId=c_ist82&logNo=220795909036&parentcategoriesNo=&categoriesNo=9&viewDate=&isShowPopularPosts=false&from=postView)
 
 [참고자료2](https://j911.me/2018/10/observer-pattern.html)
 
@@ -63,8 +63,8 @@ class TodoHtmlView {
 
 ```js
 const newData = [
-    ...this.data,
-    { id: id, title: title, tag: parsedTags, status: "todo" }
+  ...this.data,
+  { id: id, title: title, tag: parsedTags, status: "todo" },
 ];
 this.data = newData;
 ```

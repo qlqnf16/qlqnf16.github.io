@@ -3,7 +3,7 @@ layout: post
 
 title: "마이크로 프로세서"
 
-category: [computer science]
+categories: [computer-science]
 
 date: 2020-01-14
 ---

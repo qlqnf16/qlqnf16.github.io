@@ -3,7 +3,7 @@ layout: post
 
 title: "트랜잭션"
 
-category: [db]
+categories: [computer-science, db]
 
 date: 2019-10-10
 ---

@@ -1,17 +1,17 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day5"
-category: [boostcamp, js]
+categories: [boostcamp, js]
 ---
 
 vsCode 디버깅과 JS generator function
 
 ## **디버깅**
 
--   **breakpoints란**: 특정 라인이나 함수에 breakpoint를 설정하면, 그곳에서 코드 실행이 멈추고 변수나 scope같은 것들을 확인할 수 있다.
--   **watch사용법**: 코드가 실행되거나 수정됨에 따라 확인하고 싶은 변수명 등을 설정해놓을 수 있다. breakpoint의 위치에 따라 변하는 것을 이용해 디버깅에 유용히 사용할 수 있다.
--   **call stack 의 의미**: 디버거가 멈추기 직전까지 실행됐던 task가 쌓인 것. 실행순서대로 아래부터 위로 쌓인다.
--   **Step over / Step into/ Step out**
+- **breakpoints란**: 특정 라인이나 함수에 breakpoint를 설정하면, 그곳에서 코드 실행이 멈추고 변수나 scope같은 것들을 확인할 수 있다.
+- **watch사용법**: 코드가 실행되거나 수정됨에 따라 확인하고 싶은 변수명 등을 설정해놓을 수 있다. breakpoint의 위치에 따라 변하는 것을 이용해 디버깅에 유용히 사용할 수 있다.
+- **call stack 의 의미**: 디버거가 멈추기 직전까지 실행됐던 task가 쌓인 것. 실행순서대로 아래부터 위로 쌓인다.
+- **Step over / Step into/ Step out**
 
 ---
 
@@ -23,10 +23,10 @@ generator function은 한 번에 `return`까지 내려가지 않고, `yield`�
 
 ```js
 function* count(i) {
-    const result = yield i;
-    yield result + 10;
-    yield result + 15;
-    return "끝!";
+  const result = yield i;
+  yield result + 10;
+  yield result + 15;
+  return "끝!";
 }
 const gen = generator(10);
 console.log(gen.next());

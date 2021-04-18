@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "알고리즘 베이직"
-category: [dev, algorithm]
+categories: [dev, algorithm]
 ---
 
 big O notation, searching algorithm, 각종 정렬법
@@ -14,16 +14,16 @@ big O notation, searching algorithm, 각종 정렬법
 
 ```js
 // 1
-const sum = n => {
-    let result = 0;
-    for (let i = n; i > 0; i--) {
-        result += i;
-    }
-    return result;
+const sum = (n) => {
+  let result = 0;
+  for (let i = n; i > 0; i--) {
+    result += i;
+  }
+  return result;
 };
 
 // 2
-const sum = n => n(n * 1) / 2;
+const sum = (n) => n(n * 1) / 2;
 ```
 
 위 두 함수는 모두 같은 결과를 내지만, 1 의 경우 for loop 가 n 번 돌아간다. result 에 n, n-1, n-2,..., 1 을 더하는 식으로. n 이 5 면 5 번, 10000 이면 10000 번 돌아가게 될 것이다. 그리고 처음에 result 라는 변수를 지정해주는 시행 한 번을 더하면 이 함수는 n+1 번 돌아간다.
@@ -33,12 +33,12 @@ const sum = n => n(n * 1) / 2;
 반면 2 의 경우 숫자가 주어지면 그에 맞는 수학을 딱 한 번만 시행한다. 숫자가 얼마나 큰가에 상관없이 한 번만 돌아가게 되는데, 이 때의 시간복잡도를 **O(1)**로 표현한다.
 
 ```js
-someFunction = arr => {
-    for (i = 0; i < arr.length; i++) {
-        for (j = 0; j < arr.length; j++) {
-            // ...
-        }
+someFunction = (arr) => {
+  for (i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr.length; j++) {
+      // ...
     }
+  }
 };
 ```
 
@@ -54,12 +54,12 @@ someFunction = arr => {
 
 ```js
 function linearSearch(arr, num) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === num) {
-            return i;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === num) {
+      return i;
     }
-    return -1;
+  }
+  return -1;
 }
 
 /// O(n)
@@ -71,15 +71,15 @@ function linearSearch(arr, num) {
 
 ```js
 function binarySearch(arr, val) {
-    let left = 0,
-        right = arr.length - 1,
-        middle = Math.floor((left + right) / 2);
-    while (left < right && middle !== val) {
-        if (arr[middle] > val) right = middle - 1;
-        else left = middle + 1;
-        middle = Math.floor((left + right) / 2);
-    }
-    return middle === val ? middle : -1;
+  let left = 0,
+    right = arr.length - 1,
+    middle = Math.floor((left + right) / 2);
+  while (left < right && middle !== val) {
+    if (arr[middle] > val) right = middle - 1;
+    else left = middle + 1;
+    middle = Math.floor((left + right) / 2);
+  }
+  return middle === val ? middle : -1;
 }
 
 /// O(log n)
@@ -99,18 +99,18 @@ insertion sort, bubble sort, selection sort 등 다양한 정렬 접근법이 �
 
 ```js
 function bubbleSort(arr) {
-    let noSwaps;
-    for (let i = arr.length; i > 0; i--) {
-        noSwaps = true;
-        for (let j = 0; j < i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-                noSwaps = false;
-            }
-        }
-        if (noSwaps) break;
+  let noSwaps;
+  for (let i = arr.length; i > 0; i--) {
+    noSwaps = true;
+    for (let j = 0; j < i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        noSwaps = false;
+      }
     }
-    return arr;
+    if (noSwaps) break;
+  }
+  return arr;
 }
 
 /// O(n^2)
@@ -126,14 +126,14 @@ Bubble Sort, Insertion Sort 와 같은 Time Complexity 를 가지지만(n^2), �
 
 ```js
 function selectionSort(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        let minimum = i;
-        for (let j = i; j < arr.length; j++) {
-            if (arr[j] < arr[minimum]) minimum = j;
-        }
-        if (i !== minimum) [arr[i], arr[minimum]] = [arr[minimum], arr[i]];
+  for (let i = 0; i < arr.length; i++) {
+    let minimum = i;
+    for (let j = i; j < arr.length; j++) {
+      if (arr[j] < arr[minimum]) minimum = j;
     }
-    return arr;
+    if (i !== minimum) [arr[i], arr[minimum]] = [arr[minimum], arr[i]];
+  }
+  return arr;
 }
 
 /// O(n^2)
@@ -145,14 +145,14 @@ function selectionSort(arr) {
 
 ```js
 function insertionSort(arr) {
-    for (let i = 1; i < arr.length; i++) {
-        let currentVal = arr[i];
-        for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
-            arr[j + 1] = arr[j];
-        }
-        arr[j + 1] = currentVal;
+  for (let i = 1; i < arr.length; i++) {
+    let currentVal = arr[i];
+    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      arr[j + 1] = arr[j];
     }
-    return arr;
+    arr[j + 1] = currentVal;
+  }
+  return arr;
 }
 
 /// O(n^2)
@@ -183,35 +183,35 @@ function insertionSort(arr) {
 
 ```js
 function merge(arr1, arr2) {
-    let results = [],
-        i = 0,
-        j = 0;
-    while (i < arr1.length && j < arr2.length) {
-        if (arr1[i] < arr2[j]) {
-            results.push(arr1[i]);
-            i++;
-        } else {
-            results.push(arr2[j]);
-            j++;
-        }
+  let results = [],
+    i = 0,
+    j = 0;
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      results.push(arr1[i]);
+      i++;
+    } else {
+      results.push(arr2[j]);
+      j++;
     }
-    while (i < arr1.length) {
-        results.push(arr1[i]);
-        i++;
-    }
-    while (j < arr2.length) {
-        results.push(arr2[j]);
-        j++;
-    }
-    return results;
+  }
+  while (i < arr1.length) {
+    results.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length) {
+    results.push(arr2[j]);
+    j++;
+  }
+  return results;
 }
 
 function mergeSort(arr) {
-    if (arr.length <= 1) return arr;
-    let mid = Math.floor(arr.length / 2);
-    let left = mergeSort(arr.slice(0, mid));
-    let right = mergeSort(arr.slice(mid));
-    return merge(left, right);
+  if (arr.length <= 1) return arr;
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+  return merge(left, right);
 }
 
 mergeSort([10, 24, 76, 73]);
@@ -227,29 +227,29 @@ mergeSort([10, 24, 76, 73]);
 
 ```js
 function swap(arr, swapIdx, i) {
-    [arr[swapIdx], arr[i]] = [arr[i], arr[swapIdx]];
+  [arr[swapIdx], arr[i]] = [arr[i], arr[swapIdx]];
 }
 
 function pivot(arr, start = 0, end = arr.length + 1) {
-    let base = arr[start];
-    let swapIdx = start;
-    for (let i = start + 1; i < arr.length; i++) {
-        if (arr[i] < base) {
-            swapIdx++;
-            swap(arr, swapIdx, i);
-        }
+  let base = arr[start];
+  let swapIdx = start;
+  for (let i = start + 1; i < arr.length; i++) {
+    if (arr[i] < base) {
+      swapIdx++;
+      swap(arr, swapIdx, i);
     }
-    swap(arr, start, swapIdx);
-    return swapIdx;
+  }
+  swap(arr, start, swapIdx);
+  return swapIdx;
 }
 
 function quickSort(arr, left = 0, right = arr.length - 1) {
-    if (left < right) {
-        let pivotIndex = pivot(arr, left, right);
-        quickSort(arr, left, pivotIndex - 1);
-        quickSort(arr, pivotIndex + 1, right);
-    }
-    return arr;
+  if (left < right) {
+    let pivotIndex = pivot(arr, left, right);
+    quickSort(arr, left, pivotIndex - 1);
+    quickSort(arr, pivotIndex + 1, right);
+  }
+  return arr;
 }
 
 /// O(n log n)
@@ -263,27 +263,27 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 
 ```js
 function getDigit(num, digit) {
-    num += "";
-    return num[num.length - digit - 1] * 1;
+  num += "";
+  return num[num.length - digit - 1] * 1;
 }
 
 function digitCount(num) {
-    return num.toString().length - 1;
+  return num.toString().length - 1;
 }
 
 function mostDigits(arr) {
-    let max = 0;
-    arr.forEach(e => (max = Math.max(max, digitCount(e))));
-    return max;
+  let max = 0;
+  arr.forEach((e) => (max = Math.max(max, digitCount(e))));
+  return max;
 }
 
 function radixSort(arr) {
-    let mostdigit = mostDigits(arr);
-    for (let k = 0; k < mostdigit; k++) {
-        let digitbucket = [[], [], [], [], [], [], [], [], [], []];
-        arr.forEach(e => digitbucket[getDigit(e, k)].push(e));
-        arr = [].concat(...digitbucket);
-    }
-    return arr;
+  let mostdigit = mostDigits(arr);
+  for (let k = 0; k < mostdigit; k++) {
+    let digitbucket = [[], [], [], [], [], [], [], [], [], []];
+    arr.forEach((e) => digitbucket[getDigit(e, k)].push(e));
+    arr = [].concat(...digitbucket);
+  }
+  return arr;
 }
 ```

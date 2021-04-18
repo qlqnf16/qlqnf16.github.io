@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "콘솔에 색 입히기"
-category: [dev]
+categories: [dev]
 ---
 
 **FAIL!** 에러메세지를 빨간색으로 콘솔에 출력하고 싶다면?

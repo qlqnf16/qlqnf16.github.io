@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프로세스와 스레드"
-category: [OS]
+categories: [os]
 ---
 
 프로세스와 스레드의 개념에 대해 알아보자

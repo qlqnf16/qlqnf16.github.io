@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day12"
-category: [boostcamp, js]
+categories: [boostcamp, js]
 ---
 
 canvas API의 사용법에 대해 정리한다.
@@ -35,10 +35,10 @@ context.stroke(); // 선 그리기
 
 ```js
 const grd = context.createLinearGradient(
-    center - radius,
-    center + radius,
-    center - radius,
-    center + radius * 3
+  center - radius,
+  center + radius,
+  center - radius,
+  center + radius * 3
 );
 grd.addColorStop(0, "#fef362");
 grd.addColorStop(1, "#ee2a0f");
@@ -76,20 +76,20 @@ context.fillStyle = "white";
 context.fill();
 ```
 
--   원의 중심 좌표: (x, y)
--   반지름: radius
--   startAngle, endAngle: 원을 그리기 시작하는 각도와 끝나는 각도. **참고:** `arc` 함수에서 각도는 각이 아닌 라디안 값을 사용한다. 각도를 라디안으로 바꾸려면 다음의 코드를 사용할 수 있다: `radians = (Math.PI/180)*degrees`
--   기본 설정은 시계방향으로 원이 그려진다. 다섯번째 인자로 `true`를 넘겨주면 반시계방향으로 그릴 수 있다.
+- 원의 중심 좌표: (x, y)
+- 반지름: radius
+- startAngle, endAngle: 원을 그리기 시작하는 각도와 끝나는 각도. **참고:** `arc` 함수에서 각도는 각이 아닌 라디안 값을 사용한다. 각도를 라디안으로 바꾸려면 다음의 코드를 사용할 수 있다: `radians = (Math.PI/180)*degrees`
+- 기본 설정은 시계방향으로 원이 그려진다. 다섯번째 인자로 `true`를 넘겨주면 반시계방향으로 그릴 수 있다.
 
 ### **+) 부채꼴 그리기**
 
 ```js
 context.arc(
-    center,
-    center,
-    radius,
-    (Math.PI / 180) * -15,
-    (Math.PI / 180) * 30
+  center,
+  center,
+  radius,
+  (Math.PI / 180) * -15,
+  (Math.PI / 180) * 30
 );
 context.lineTo(center, center);
 context.fill();
@@ -135,20 +135,18 @@ const { createCanvas, Image } = require("canvas");
 
 const img = new Image();
 img.onload = () => {
-    let portrait = true;
-    if (img.height < img.width) portrait = false;
+  let portrait = true;
+  if (img.height < img.width) portrait = false;
 
-    const width = portrait
-        ? img.width * ((radius * 2) / img.height)
-        : radius * 2;
-    const height = portrait
-        ? radius * 2
-        : img.height * ((radius * 2) / img.width);
+  const width = portrait ? img.width * ((radius * 2) / img.height) : radius * 2;
+  const height = portrait
+    ? radius * 2
+    : img.height * ((radius * 2) / img.width);
 
-    context.drawImage(img, 350, center + radius, width, height);
+  context.drawImage(img, 350, center + radius, width, height);
 };
-img.onerror = err => {
-    throw err;
+img.onerror = (err) => {
+  throw err;
 };
 img.src = "./hockney2.jpeg";
 ```

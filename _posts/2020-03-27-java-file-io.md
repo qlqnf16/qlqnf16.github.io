@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAVA 파일 입력"
-category: [java]
+categories: [dev, java]
 ---
 
 JAVA 에서 파일로 입력을 받는 여러가지 방법
@@ -9,8 +9,6 @@ JAVA 에서 파일로 입력을 받는 여러가지 방법
 ---
 
 JAVA는 알고리즘 문제를 풀기 위해 접한 게 처음이어서, `Scanner(System.in)`을 이용한 입력에만 익숙했다. 그러다 **파일입력을 받아 처리**하는 게 과제로 나왔는데, 조금 까다로웠어서 정리해놓는다.
-
-
 
 ## 한 줄씩 읽기
 
@@ -30,11 +28,11 @@ import java.io.IOException;
 
 public class FileInput {
   		static int TC;
- 
+
       public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             String fileName = sc.nextLine();
-            try {            	
+            try {
             	File file = new File("src/algorithm/"+fileName);
             	FileReader fileReader = new FileReader(file);
             	BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -52,8 +50,6 @@ public class FileInput {
 }
 ```
 
-
-
 ## 파일 통째로 읽기
 
 Scanner 에 System.in 대신 **File 객체**를 넣어 파일을 통째로 읽어올 수도 있다. 이 방법을 쓰면 기존에 Scanner 로 입력받는 것과 유사하게 구현할 수 있다.
@@ -62,7 +58,7 @@ Scanner 에 System.in 대신 **File 객체**를 넣어 파일을 통째로 읽�
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
- 
+
 public class FileInput {
     public static void main(String[] args){
         try{
@@ -77,11 +73,6 @@ public class FileInput {
 }
 ```
 
-
-
 ### 참고 사이트
 
 > [자바 파일 입출력 (txt파일 한 문자씩, 한 줄씩, 한 번에 읽기)](https://jeong-pro.tistory.com/69)
-
-
-

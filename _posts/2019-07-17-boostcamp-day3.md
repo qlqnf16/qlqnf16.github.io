@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "네이버 부스트캠프 챌린지 Day3"
-category: [boostcamp, js]
+categories: [boostcamp, js]
 ---
 
 .map(), .reduce(), .filter(), .foreach() 등 javascript 자체 array method들을 직접 구현해보았다.
