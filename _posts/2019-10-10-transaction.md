@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "트랜잭션"
+title: "[DB] 트랜잭션"
 
 tags: [computer-science, db]
 
