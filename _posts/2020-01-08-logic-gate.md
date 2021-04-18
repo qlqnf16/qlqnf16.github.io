@@ -3,7 +3,7 @@ layout: post
 
 title: "디지털 논리회로, 플립플롭"
 
-categories: [computer-science]
+tags: [computer-science]
 
 date: 2020-01-08
 ---

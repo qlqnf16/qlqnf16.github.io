@@ -3,7 +3,7 @@ layout: post
 
 title: "최소 스패닝 트리"
 
-categories: [data-structure, algorithm]
+tags: [data-structure, algorithm]
 
 date: 2019-10-08
 ---

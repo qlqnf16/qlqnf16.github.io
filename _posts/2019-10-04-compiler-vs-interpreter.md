@@ -3,7 +3,7 @@ layout: post
 
 title: "컴파일러 vs 인터프리터"
 
-categories: [computer-science]
+tags: [computer-science]
 
 date: 2019-10-04 21:03
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "스택과 큐, 원형 큐"
-categories: [data-structure]
+tags: [data-structure]
 ---
 
 c를 이용해 스택과 큐, 원형큐를 다양한 방법으로 구현해보자

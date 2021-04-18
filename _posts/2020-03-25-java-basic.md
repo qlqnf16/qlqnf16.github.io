@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAVA 기본"
-categories: [dev, java]
+tags: [dev, java]
 ---
 
 객체지향프로그램 JAVA에 대해. 강의에서 이것저것 정리

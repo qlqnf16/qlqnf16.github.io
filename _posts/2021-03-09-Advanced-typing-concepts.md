@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Advanced TS"
-categories: [ts]
+tags: [ts]
 ---
 
 Understanding TypeScript : Section 6

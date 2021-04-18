@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day13"
-categories: [boostcamp, computer-science]
+tags: [boostcamp, computer-science]
 ---
 
 tokenizer/lexer/parser, 그리고 정규표현식!

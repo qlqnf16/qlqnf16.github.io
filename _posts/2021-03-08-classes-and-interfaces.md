@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TS: Class와 Interface"
-categories: [ts]
+tags: [ts]
 ---
 
 Understanding TypeScript : Section 5

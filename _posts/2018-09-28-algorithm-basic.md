@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "알고리즘 베이직"
-categories: [dev, algorithm]
+tags: [dev, algorithm]
 ---
 
 big O notation, searching algorithm, 각종 정렬법

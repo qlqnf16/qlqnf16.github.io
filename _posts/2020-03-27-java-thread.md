@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAVA Thread"
-categories: [dev, java]
+tags: [dev, java]
 ---
 
 스레드(Thread)에 대해 알아보자

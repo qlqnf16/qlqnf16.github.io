@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day7"
-categories: [boostcamp, virtual environment, shellscript]
+tags: [boostcamp, virtual environment, shellscript]
 ---
 
 docker 입문하기

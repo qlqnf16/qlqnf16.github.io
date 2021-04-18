@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day11"
-categories: [boostcamp, js]
+tags: [boostcamp, js]
 ---
 
 js의 핵심, callstack과 eventloop

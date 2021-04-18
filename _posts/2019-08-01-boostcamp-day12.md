@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day12"
-categories: [boostcamp, js]
+tags: [boostcamp, js]
 ---
 
 canvas API의 사용법에 대해 정리한다.

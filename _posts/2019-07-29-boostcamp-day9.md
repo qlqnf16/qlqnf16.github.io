@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day9"
-categories: [boostcamp, js, testing]
+tags: [boostcamp, js, testing]
 ---
 
 테스팅, 테스팅, 말로만 듣던 테스팅을 드디어 해 보았다.

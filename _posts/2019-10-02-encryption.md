@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "암호화 알고리즘"
-categories: [computer-science]
+tags: [computer-science]
 ---
 
 대칭키 암호화, 비대칭키 암호화, 그리고 해쉬(Hash)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAVA 파일 입력"
-categories: [dev, java]
+tags: [dev, java]
 ---
 
 JAVA 에서 파일로 입력을 받는 여러가지 방법

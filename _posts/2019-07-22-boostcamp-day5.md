@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day5"
-categories: [boostcamp, js]
+tags: [boostcamp, js]
 ---
 
 vsCode 디버깅과 JS generator function

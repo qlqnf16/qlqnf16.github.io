@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "부스트캠프 챌린지 Day4"
-categories: [boostcamp, computer-science]
+tags: [boostcamp, computer-science]
 ---
 
 논리게이트

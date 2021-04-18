@@ -3,7 +3,7 @@ layout: post
 
 title: "C++ 연습"
 
-categories: [dev, c++]
+tags: [dev, c++]
 
 date: 2020-04-17
 ---

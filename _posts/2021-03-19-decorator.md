@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TS: Decorators"
-categories: [ts]
+tags: [ts]
 ---
 
 Understanding TypeScript : Section 8

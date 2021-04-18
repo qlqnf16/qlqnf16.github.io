@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swing"
-categories: [dev, java]
+tags: [dev, java]
 ---
 
 swing 컴포넌트란 무엇일까?
